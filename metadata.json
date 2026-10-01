@@ -1,0 +1,6 @@
+{
+  "name": "Banco de Ideas",
+  "description": "Aplicación personal para recopilar ideas en un muro visual tipo Pinterest y gestionar un repositorio de prompts organizado por carpetas con copia rápida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

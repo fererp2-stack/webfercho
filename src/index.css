@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-app: #F6F6F8;
+    --bg-card: #FFFFFF;
+    --bg-card-hover: #FAFAFB;
+    --bg-muted: #EEEEF1;
+    --text-main: #18181B;
+    --text-muted: #71717A;
+    --border-main: #E4E4E7;
+    --border-subtle: #EEEEF1;
+    --accent: #7C5CFF;
+    --accent-hover: #6845EE;
+    --accent-light: #F2EEFF;
+    --accent-text: #FFFFFF;
+    --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  }
+
+  [data-theme="dark"] {
+    --bg-app: #0E0E11;
+    --bg-card: #18181B;
+    --bg-card-hover: #1F1F24;
+    --bg-muted: #24242A;
+    --text-main: #F4F4F5;
+    --text-muted: #A1A1AA;
+    --border-main: #27272A;
+    --border-subtle: #202024;
+    --accent: #7C5CFF;
+    --accent-hover: #8D70FF;
+    --accent-light: #241D3B;
+    --accent-text: #FFFFFF;
+    --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.3), 0 2px 6px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  body {
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    overflow-x: hidden;
+  }
+}
+
+/* Pinterest style masonry columns */
+.ideas-masonry {
+  column-count: 1;
+  column-gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .ideas-masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ideas-masonry {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ideas-masonry {
+    column-count: 4;
+  }
+}
+
+.masonry-card {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.5);
+}
